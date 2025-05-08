@@ -1,0 +1,19 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: bf322807-9323-4e51-a6fd-6ab2ee729fcd
+  title: Statistical Python
+  # description:
+  # keywords: []
+  # authors: []
+  # github: https://github.com/statistical-python/statistical-python.org
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  #nav:
+  #  - title: Packages
+  #    url: /packages
+  options:
+    logo_text: Statistical Python
+  #   favicon: favicon.ico
+  #   logo: statistical-python_logo.png
