@@ -1,0 +1,38 @@
+# Install pre-commit hooks via
+# pre-commit install
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b # frozen: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: 787fb9f542b140ba0b2aced38e6a3e68021647a3 # frozen: v3.5.3
+    hooks:
+      - id: prettier
+        files: \.(css|md|yml|yaml)
+        args: [--prose-wrap=preserve]
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: "63c8f8312b7559622c0d82815639671ae42132ac" # frozen: v2.4.1
+    hooks:
+      - id: codespell
+        args:
+          ["-L", "recuse,nd,coo", "-w", "--skip=static/teams/bots-graphs.html"]
+
+ci:
+  autofix_prs: false
+  autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
+  autoupdate_schedule: quarterly
