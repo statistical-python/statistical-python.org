@@ -11,7 +11,7 @@ inkscape --export-type=png statistical-python-logo.svg
 2. Convert png to multi-resolution icon:
 
 ```
-convert statistical-python-logo.png -define icon:auto-resize=64,48,32,16 -colors 3 favicon.ico
+convert statistical-python-logo.png -define icon:auto-resize=64,48,32,16 -colors 4 favicon.ico
 ```
 
 ## To simplify SVGs for making icons
@@ -30,5 +30,5 @@ See the [SimpleIcons guidelines](https://github.com/simple-icons/simple-icons/bl
 They use [SVGO](https://github.com/svg/svgo) to optimize SVGs. You can also use scour: `pip install scour`.
 
 ```
-scour --set-precision=2 --strip-xml-prolog --remove-metadata --enable-comment-stripping --enable-viewboxing --indent=none --no-line-breaks --strip-xml-space --shorten-ids --enable-id-stripping statistical-python.svg statistical-python-icon.svg
+scour --set-precision=2 --strip-xml-prolog --remove-metadata --enable-comment-stripping --enable-viewboxing --indent=none --no-line-breaks --strip-xml-space --shorten-ids --enable-id-stripping statistical-python-logo.svg statistical-python-icon.svg
 ```
