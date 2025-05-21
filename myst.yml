@@ -6,13 +6,15 @@ project:
   # description:
   # keywords: []
   # authors: []
-  # github: https://github.com/statistical-python/statistical-python.org
+  github: https://github.com/statistical-python/
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme
-  #nav:
-  #  - title: Packages
-  #    url: /packages
+  nav:
+    - title: About
+      url: /about
+    - title: Packages
+      url: /packages
   options:
     favicon: images/favicon.ico
     logo: images/statistical-python-logo.svg
