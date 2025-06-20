@@ -7,7 +7,7 @@ body {
 }
 
 .article.content {
-  min-height: 50vh;
+  min-height: 0vh;
   flex: 1 0 auto;
 }
 
