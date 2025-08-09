@@ -7,8 +7,10 @@ site:
 # 2024 Landscape Analysis
 
 Python is widely adopted in data science, and its use for statistics is expanding rapidly---particularly in education and applied research.
-The statistical ecosystem in Python is currently anchored by four major libraries:
+The statistical ecosystem in Python is currently anchored by six major libraries:
 
+- [numpy](https://www.numpy.org/), which provides fast, flexible array and numerical operations and underpins nearly all statistical and scientific computing in Python.
+- [pandas](https://www.pandas.org/), which offers intuitive, high-performance data structures for tabular and time series data, making data cleaning, wrangling, and exploration straightforward and efficient.
 - [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html), which provides a comprehensive suite of probability distributions, summary statistics, and basic statistical tests.
 - [statsmodels](https://www.statsmodels.org/), which offers tools for econometrics, classical statistics, and statistical modeling---including linear and generalized linear models, time series analysis, and hypothesis testing.
 - [scikit-learn](https://scikit-learn.org/), which is best known for machine learning but also supports some statistical modeling, offering a consistent API for predictive analytics and data preprocessing.
@@ -21,7 +23,7 @@ Libraries like scikit-learn are especially valued for their clean, consistent in
 While there are many smaller, specialized packages available, the ecosystem remains dominated by these large, general-purpose libraries.
 This concentration of resources ensures stability and quality but can also limit the visibility and adoption of innovative or niche statistical tools.
 As Python's role in statistics continues to grow, fostering a more diverse and accessible ecosystem will be key to meeting the evolving needs of educators, researchers, and practitioners.
-This will also require increased statistics methods developers' participation in the core packages.
+This will also require increased participation from statistics methods developers in the core packages.
 
 # Relationship to Other Languages
 
@@ -38,7 +40,7 @@ The R ecosystem also benefits from substantial contributions from statistics met
 | Core Libraries      | [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html), [statsmodels](https://www.statsmodels.org/), [scikit-learn](https://scikit-learn.org/) | [base R](https://www.r-project.org/), [tidyverse](https://www.tidyverse.org/), many CRAN packages |
 | User Experience     | Fragmented, less cohesive                                                                                                                                    | Cohesive, tidyverse pipelines, RStudio                                                            |
 | Teaching Resources  | Improving, but less abundant                                                                                                                                 | Extensive, beginner-friendly                                                                      |
-| Community           | Large, less connected in statistics                                                                                                                          | Strong, statistics-focused, welcoming                                                             |
+| Community           | Large, but less connected in statistics                                                                                                                      | Strong, statistics-focused, welcoming                                                             |
 | Package Development | High barriers, less modularity                                                                                                                               | Easy, many small packages, dev tools                                                              |
 | Interoperability    | Needs improvement (data structures, APIs)                                                                                                                    | Strong within tidyverse, RStudio                                                                  |
 | Branding            | Data science/machine learning focus                                                                                                                          | Statistics-focused                                                                                |
@@ -57,10 +59,19 @@ Despite Python's strengths, several challenges remain.
 - **Fragmentation**: The ecosystem is fragmented, with major libraries (e.g., statsmodels vs. scikit-learn) adopting incompatible APIs and workflows, leading to confusion for users and students.
 - **User Experience**: There is no central landing place or unified entry point for statistics in Python, unlike R's [tidyverse](https://www.tidyverse.org/) or RStudio, making it harder for newcomers to get started.
 - **Interoperability**: Data structures (such as those from [pandas](https://pandas.pydata.org/) and [NumPy](https://numpy.org/)) do not always work seamlessly across libraries, requiring conversions and leading to unpredictable function outputs compared to R's tidyverse pipelines.
+  Moreover some statistical methods use the results of other statistical subroutines (e.g., a multiple testing adjustment might be applied to the results of a number of different tests).
+  At the moment there is limited support for putting statistical methods together as subroutines.
 - **Teaching Resources**: Python lacks the abundance of user-friendly, statistics-focused tutorials and case studies found in the R community.
 - **Contributor Barriers**: Contributing to core libraries can be difficult due to high standards and lack of modularity.
   Small, specialized packages exist but are less visible and less widely used than in R.
-- **Statistical Methods Coverage**: Some advanced or niche statistical methods are missing or hard to find, especially compared to R's vast [CRAN](https://cran.r-project.org/) repository.
+- **Statistical Methods Coverage**: Support for basic methods could be improved; moreover, Python's advanced or niche statistical methodology support generally falls behind R's vast [CRAN](https://cran.r-project.org/) repository.
+- **Comprehensive tooling for statistical analysis**: Data analysts using statistical methods need more than just the `p`-value for a statistical test or coefficient for a regression model.
+  There are well-established numerical and visual diagnostics that accompany many statistical methods, but typically have limited support in existing packages.
+  Moreover, analysts need to communicate their results through a variety of mediums and there is often minimal communication support built into Python statistical software.
+- **Abstracting the core computation from the statistical methodology**: Many computations required in statistics (e.g. solving the optimization problem associated with a generalized linear model) have a variety of algorithmic options.
+  While most statistical packages implement one (or a couple of) algorithms, there is rarely one "right" algorithm for every scenario.
+  Depending on the size of the data, available hardware, analysis needs, etc., there can be multiple algorithms an analyst might want to use.
+  Many Python statistical software packages tightly couple the core computation with the rest of the methodology, which makes it difficult to provide better computational approaches.
 - **Community and Culture**: The Python statistics community is less cohesive and connected than R's, which benefits from a strong identity and established events.
 
 # Conclusion
@@ -76,5 +87,5 @@ In particular, Python needs:
 - Lower barriers for contributors and greater visibility for specialized statistical packages.
 - Stronger community identity and central organization for statistics in Python.
 
-The Statistical Python project seeks to address these needs by fostering collaboration, sharing best practices, and building a sustainable, inclusive community.
+The Statistical Python project seeks to address these needs by fostering collaboration, sharing best practices, and building a sustainable, open community.
 As a domain stack within the [Scientific Python project](https://scientific-python.org/), and with support from the NSF POSE Phase I grant, we are committed to making Python a premier platform for statistical computing, education, and research.
