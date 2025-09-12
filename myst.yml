@@ -19,3 +19,6 @@ site:
     favicon: images/favicon.ico
     logo: images/statistical-python-logo.svg
     logo_text: Statistical Python
+    style: ./site.css
+  parts:
+    footer: footer.md
