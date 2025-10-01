@@ -9,12 +9,14 @@ site:
 Python is widely adopted in data science, and its use for statistics is expanding rapidly---particularly in education and applied research.
 The statistical ecosystem in Python is currently anchored by six major libraries:
 
-- [numpy](https://www.numpy.org/), which provides fast, flexible array and numerical operations and underpins nearly all statistical and scientific computing in Python.
-- [pandas](https://www.pandas.org/), which offers intuitive, high-performance data structures for tabular and time series data, making data cleaning, wrangling, and exploration straightforward and efficient.
-- [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html), which provides a comprehensive suite of probability distributions, summary statistics, and basic statistical tests.
-- [statsmodels](https://www.statsmodels.org/), which offers tools for econometrics, classical statistics, and statistical modeling---including linear and generalized linear models, time series analysis, and hypothesis testing.
-- [scikit-learn](https://scikit-learn.org/), which is best known for machine learning but also supports some statistical modeling, offering a consistent API for predictive analytics and data preprocessing.
-- [seaborn](https://seaborn.pydata.org/), a library built on top of matplotlib that excels at creating informative and attractive statistical graphics, making it easier to visualize distributions, relationships, and trends in data.
+- [numpy](https://www.numpy.org/), which provides fast, flexible array and numerical operations, and underpins nearly all statistical and scientific computing in Python.
+  It supports descriptive statistics, correlation and covariance computations, random sampling, and tools for constructing histograms and binning data.
+- [pandas](https://www.pandas.org/), which offers intuitive, high-performance data structures for tabular and time series data, making data cleaning, wrangling, reshaping, aggregation, and exploratory analysis straightforward and efficient.
+- [scipy](https://www.scipy.org/), which builds on NumPy to deliver a broad range of scientific and statistical functionality---including, in its [`scipy.stats`](https://docs.scipy.org/doc/scipy/reference/stats.html) submodule, a comprehensive suite of probability distributions, summary statistics, and basic statistical tests.
+  It also provides modules for clustering, optimization, interpolation, and signal processing.
+- [matplotlib](https://matplotlib.org/), the foundational plotting library in Python, which enables the creation of high-quality static, animated, and interactive visualizations, and serves as the basis for many higher-level plotting and statistical graphics libraries.
+- [statsmodels](https://www.statsmodels.org/), which offers tools for econometrics, classical statistics, and statistical modeling---including linear and generalized linear models, time series analysis, survival analysis, and hypothesis testing, with extensive support for model diagnostics and statistical inference.
+- [scikit-learn](https://scikit-learn.org/), which is best known for machine learning but also supports statistical modeling, offering a consistent API for regression, classification, clustering, model evaluation, statistical preprocessing, and dimensionality reduction.
 
 These core libraries are generally well-tested, reliable, and uphold high software engineering standards, making them trusted foundations for research and application.
 They benefit from contributions not only from science users but also from methods and software developers.
