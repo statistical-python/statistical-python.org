@@ -16,9 +16,9 @@ site:
     - title: Packages
       url: /packages
   options:
-    favicon: images/favicon.ico
-    logo: images/statistical-python-logo.svg
+    favicon: static/images/favicon.ico
+    logo: static/images/statistical-python-logo.svg
     logo_text: Statistical Python
-    style: ./site.css
+    style: static/site.css
   parts:
     footer: footer.md
