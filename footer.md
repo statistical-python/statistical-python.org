@@ -14,7 +14,7 @@
 
 ::::{div}
 
-```{image} images/statistical-python-logo.svg
+```{image} static/images/statistical-python-logo.svg
 :width: 60px
 :align: left
 ```
