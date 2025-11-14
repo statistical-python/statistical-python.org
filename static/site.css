@@ -1,24 +1,25 @@
-html,
-body {
-  height: 100%;
-}
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 0;
+  flex: 1 0 auto;
 }
 
 .article.content {
   /* Override 100vh from myst-theme:styles/typography.css so content div
-   * doesn't push the footer offscreen.
+   * doesn't grow <main> to push the footer offscreen.
    */
-  min-height: 0vh;
-  flex: 1 0 auto;
+  min-height: 0;
 }
 
 .footer {
   /* Make footer "sticky" to page bottom (also the above flex rules), per
    * the flexbox strategy described here:
-   * 	https://css-tricks.com/couple-takes-sticky-footer/#aa-there-is-flexbox
+   *    https://css-tricks.com/couple-takes-sticky-footer/#aa-there-is-flexbox
    * and here:
    *    https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
    * This solution does not require hardcoding a fixed footer height in the
