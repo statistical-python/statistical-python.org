@@ -7,6 +7,10 @@ project:
   # keywords: []
   # authors: []
   github: https://github.com/statistical-python/
+  social:
+    github: statistical-python
+    discourse: https://discuss.scientific-python.org/ 
+    discord: https://discord.com/invite/vur45CbwMz
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme

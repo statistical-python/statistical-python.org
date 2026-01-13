@@ -14,3 +14,12 @@ We foster collaboration and knowledge sharing to lower barriers to contribution,
 As a domain stack within the larger [Scientific Python project](https://scientific-python.org/), Statistical Python leverages the strengths of the scientific Python ecosystem while addressing the unique needs of the statistical community.
 Our vision is to connect statistical innovation with open-source software engineering, drawing on best practices from both the Python and R communities.
 We aim to catalyze the growth of a vibrant, cross-disciplinary developer and user base, making Python a premier platform for statistical computing and education.
+
+:header-rows: 1
+:label: table-frontmatter-social-links
+* - Field
+  - Description
+* - `url`
+  - a string - website or homepage of the author
+* - `bluesky`
+  - scientific-python.org
